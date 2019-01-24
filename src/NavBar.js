@@ -14,7 +14,7 @@ class NavBar extends React.Component {
             <Link className="page-link" to="/cart">Cart</Link>
           </li>
           <li className="link-wrapper">
-            <Link to="/products">Product Page</Link>
+            <Link to="/products">Products</Link>
           </li>
         </ul>
       </nav>

@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import WelcomePage from './WelcomePage';
-import ProductPage from './ProductPage';
+import ProductsPage from './ProductsPage';
 import Cart from './Cart';
 import './App.css';
 
 class App extends Component {
   render() {
+
     return (
       <div className="App">
         <NavBar />
@@ -20,7 +21,7 @@ class App extends Component {
         <Route
           exact
           path="/products"
-          component={ProductPage}
+          component={ProductsPage}
         />
 
         <Route

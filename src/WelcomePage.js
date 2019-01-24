@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { Route, Link } from 'react-router-dom';
 import './WelcomePage.css';
 

@@ -3,7 +3,7 @@
     "id": 1,
     "cost": 31.99,
     "title": "Tom Clancy's Rainbow Six Siege",
-    "genre": ["first-person shooter", "tactical shooter"],
+    "genre": ["First-person Shooter", "Tactical Shooter"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg/220px-Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg",
     "description": "The game puts heavy emphasis on environmental destruction and cooperation between players. Each player assumes control of an attacker or a defender in different gameplay modes such as rescuing a hostage, defusing a bomb, and taking control of a capture point. The title has no campaign but features a series of short missions that can be played solo. These missions have a loose narrative, focusing on recruits going through training to prepare them for future encounters with the White Masks, a terrorist group that threatens the safety of the world."
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "cost": 19.99,
     "title": "Dirt Rally",
-    "genre": ["racing", "racing simulation"],
+    "genre": ["Racing", "Racing Simulation"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Dirt_rally_cover_art.jpg/220px-Dirt_rally_cover_art.jpg",
     "description": "Dirt Rally is a racing video game focused on rallying. Players compete in timed stage events on tarmac and off-road terrain in varying weather conditions. On release, the game featured 17 cars, 36 stages from three real world locations - Monte Carlo, Powys and Argolis - and asynchronous multiplayer. Stages range from 4 to 16 km. Subsequent updates added three more locations in the form of Baumholder, Jämsä and Värmland, as well as rallycross and player versus player multiplayer modes. Codemasters announced a partnership with the FIA World Rallycross Championship in July 2015, leading to the inclusion of the Lydden Hill Race Circuit (England), Lånkebanen (Norway), and Höljesbanan (Sweden) to the game."
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "cost": 49.99,
     "title": "SoulCalibur 6",
-    "genre": ["fighting"],
+    "genre": ["Fighting"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Soulcalibur_VI_cover_art.jpg/220px-Soulcalibur_VI_cover_art.jpg",
     "description": "Following the tradition of prior installments, Soulcalibur VI's gameplay involves two weapon-wielding combatants battling against one another on a 3D plane. The game introduces a new mechanic known as the 'Reversal Edge', which allows players to defend against an oncoming attack and quickly strike back, alongside a slow-motion effect, enabling more options in player defense."
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "cost": 25.99,
     "title": "Yakuza 0",
-    "genre": ["action-adventure", "beat'em up"],
+    "genre": ["Action-Adventure", "Beat'em Up"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Yakuza0.jpg/220px-Yakuza0.jpg",
     "description": "Yakuza 0 is an action-adventure game set in an open world environment and played from a third-person perspective. The game takes place in December 1988, in Kamurocho and Sōtenbori, fictionalized recreations of Tokyo's Kabukichō and Osaka's Dōtonbori areas respectively. The player controls series protagonist Kazuma Kiryu and recurring character Goro Majima, alternating between the two at predetermined points during the story."
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "cost": 49.99,
     "title": "Tekken 7",
-    "genre": ["fighting"],
+    "genre": ["Fighting"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Official_Tekken_7_Logo.jpg/220px-Official_Tekken_7_Logo.jpg",
     "description": "Set shortly after the events of Tekken 6, the plot focuses on the events leading up to the final battle between martial artist Heihachi Mishima and his son, Kazuya. Tekken 7 introduces elements for the fighting system such as the Rage and the Power Crush to increase the characters' powers. Tekken 7 was a critical and commercial success, selling three million copies before the game's first anniversary."
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "cost": 59.99,
     "title": "Far Cry 5",
-    "genre": ["action-adventure","first-person shooter"],
+    "genre": ["Action-Adventure","First-person Shooter"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Far_Cry_5_boxshot.jpg/220px-Far_Cry_5_boxshot.jpg",
     "description": "The game takes place in Hope County, a fictional region of Montana, United States. The main story revolves around the Project at Eden's Gate, a doomsday cult that rules the land under the guise of its charismatic leader, Joseph Seed. Players control an unnamed junior deputy sheriff who becomes trapped in Hope County, and must work alongside factions of a resistance to liberate the county from the despotic rule of the Seeds and Eden's Gate. Gameplay focuses on combat and exploration; players battle enemy soldiers and dangerous wildlife using a wide array of weapons. The game features many elements found in role-playing games, such as a branching storyline and side quests. The game also features a map editor, a co-operative multiplayer mode, and a competitive multiplayer mode."
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "cost": 79.99,
     "title": "Call of Duty: Black Ops 4",
-    "genre": ["first-person shooter", "battle royale"],
+    "genre": ["First-person Shooter", "Battle Royale"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Call_of_Duty_Black_Ops_4_official_box_art.jpg/220px-Call_of_Duty_Black_Ops_4_official_box_art.jpg",
     "description": "Black Ops 4 is the first Call of Duty title without a traditional single-player campaign mode. Instead, it features the Solo Missions mode, which focuses on the backstories of the game's multiplayer characters, known as 'Specialists'. The missions take place between Black Ops II and III chronologically. Some of the Specialists also carried over from Black Ops III. The multiplayer mode is the first in the series to not feature automatic health regeneration and introduces both predictive recoil and a new ballistics system. The game includes three Zombies maps on release day, four if a special edition of the game, or the Black Ops Pass, is purchased. The locations of the maps include the RMS Titanic, an arena in Ancient Rome, and Alcatraz Federal Penitentiary. The game also introduces a battle royale mode called Blackout, which features up to 100 players in each match. Many characters from this and other Black Ops titles can be used as the player's character model in this mode."
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "cost": 25.99,
     "title": "PlayerUnknown's Battlegrounds: PUBG",
-    "genre": ["battle royale"],
+    "genre": ["Battle Royale"],
     "imageURL": "https://i.imgur.com/CoH8PWs.jpg",
     "description": "PlayerUnknown's Battlegrounds (PUBG) is a 2017 online multiplayer battle royale game developed and published by PUBG Corporation, a subsidiary of South Korean video game company Bluehole. The game is based on previous mods that were created by Brendan 'PlayerUnknown' Greene for other games, inspired by the 2000 Japanese film Battle Royale, and expanded into a standalone game under Greene's creative direction. In the game, up to one hundred players parachute onto an island and scavenge for weapons and equipment to kill others while avoiding getting killed themselves. The available safe area of the game's map decreases in size over time, directing surviving players into tighter areas to force encounters. The last player or team standing wins the round."
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "cost": 15.99,
     "title": "Company of Heroes 2",
-    "genre": ["real-time strategy"],
+    "genre": ["Real-Time Strategy"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Company_of_Heroes_2_cover.jpeg/220px-Company_of_Heroes_2_cover.jpeg",
     "description": "Company of Heroes 2 is a real-time strategy video game developed by Relic Entertainment and published by Sega for Microsoft Windows, OS X, and Linux. It is the sequel to the 2006 game Company of Heroes. As with the original Company of Heroes, the game is set in World War II but with the focus on the Eastern Front, with players primarily controlling the side of the Soviet Red Army during various stages of the Eastern Front, from Operation Barbarossa to the Battle of Berlin. Company of Heroes 2 runs on Relic Entertainment's proprietary Essence 3.0 game engine."
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "cost": 4.99,
     "title": "Dead Space",
-    "genre": ["horror", "survival horror"],
+    "genre": ["Horror", "Survival Horror"],
     "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/5/57/Dead_Space_Box_Art.jpg/220px-Dead_Space_Box_Art.jpg",
     "description": "Dead Space is a science fiction survival horror video game developed by EA Redwood Shores (subsequently known as Visceral Games) for Microsoft Windows, PlayStation 3, and Xbox 360. The game was released in October 2008. The game puts the player in control of an engineer named Isaac Clarke who fights Necromorphs, monstrous reanimated human corpses, aboard an interstellar mining ship, the USG Ishimura."
   }
