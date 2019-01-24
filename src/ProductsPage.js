@@ -12,17 +12,24 @@ class ProductsPage extends React.Component {
     // query: "",
     products: dataClone,
   }
+  
+
   render() {
+    const { products } = this.state;
+    const { addToCart, cart } = this.props;
+
+    console.log(cart);
     return (
       <div className="ProductsPage">
         testing list
         <ul className="product-list">
           {
-            this.state.products.map((product, index) => (
+            products.map((product, index) => (
               <ProductListItem
                 key={index}
                 index={index}
                 product={product}
+                addToCart={addToCart}
               />
             ))
           }

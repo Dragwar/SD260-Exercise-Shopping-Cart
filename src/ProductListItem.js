@@ -5,7 +5,8 @@ import './ProductListItem.css';
 
 class ProductListItem extends React.Component {
   render() {
-    const { product } = this.props;
+    const { product, addToCart } = this.props;
+
     return (
       <li
         id={`gameID-${product.id}`}
@@ -26,18 +27,23 @@ class ProductListItem extends React.Component {
           />
         </div>
 
-        <span className="genre-header">Genre(s):</span>
+        <span className="genre-header">
+          Genre(s):
+        </span>
         <p className="genre">
           {product.genre.join(', ')}
         </p>
 
-        <span className="description-header">Description:</span>
+        <span className="description-header">
+          Description:
+        </span>
         <p className="description">
           {product.description}
         </p>
 
         <button
           className="add-to-cart-btn"
+          onClick={() => addToCart(product)}
         >
           Add To Cart
         </button>

@@ -7,6 +7,28 @@ import Cart from './Cart';
 import './App.css';
 
 class App extends Component {
+  state = {
+    cart: []
+  }
+
+  addToCart = (productObject) => {
+    let modifiedCloneObj = { ...productObject };
+
+    /**@note just removed unused properties on the product when in cart */
+    delete modifiedCloneObj.description;
+    delete modifiedCloneObj.genre;
+
+    this.setState((prevState) => ({
+      cart: [modifiedCloneObj, ...prevState.cart]
+    }));
+  }
+
+  removeFromCart = (productObject) => {
+    this.setState((prevState) => ({
+      cart: [...prevState.cart].filter((product) => productObject !== product)
+    }));
+  }
+
   render() {
 
     return (
@@ -15,19 +37,30 @@ class App extends Component {
         <Route
           exact
           path="/"
-          component={WelcomePage}
+          component={() => <WelcomePage />}
         />
 
         <Route
           exact
           path="/products"
-          component={ProductsPage}
+          component={() => (
+            <ProductsPage
+              cart={this.state.cart}
+              addToCart={this.addToCart}
+            />
+          )}
+
         />
 
         <Route
           exact
           path="/cart"
-          component={Cart}
+          component={() => (
+            <Cart
+              cart={this.state.cart}
+              removeFromCart={this.removeFromCart}
+            />
+          )}
         />
 
       </div>
