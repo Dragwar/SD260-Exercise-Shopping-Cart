@@ -1,6 +1,10 @@
 .NavBar {
-  background-color: rgba(61, 61, 61, 0.685);
-  padding: 10px 5px 15px 5px;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background-color: rgba(101, 103, 105, 0.897);
+  
+  /* padding: 10px 5px 15px 5px; */
 }
 
 .NavBar ul {
@@ -20,15 +24,19 @@
 
 .NavBar .page-link {
   text-decoration: none;
-  color: gray;
+  color: lightgray;
 }
 
 .NavBar .page-link:hover {
   color: white;
 }
 
-.number-of-items-in-cart {
+p.number-of-items-in-cart {
   margin: 0;
+  padding: 3px 10px;
+  background: rgba(25, 190, 182, 0.897);
+  border: 0px solid white;
+  border-radius: 100%;
 }
 
 .number-of-items-in-cart span {

@@ -8,14 +8,16 @@
 }
 
 .Cart .totalCost-wrapper {
+  display: flex;
+  justify-content: space-evenly;
   color: white;
   position: sticky;
-  top: 0;
+  top: 62px;
   margin: 0;
   padding: 15px 0px 15px;
   font-weight: 600;
   font-size: 125%;
-  background-color: rgba(101, 103, 105, 0.897);
+  background-color: rgba(61, 61, 61, 0.9);
 }
 
 .Cart .totalCost-wrapper h5 {
