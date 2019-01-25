@@ -12,15 +12,46 @@ class App extends Component {
     totalCost: 0,
   }
 
-  addToCart = (productObject) => {
+  handleQuantity = (productObject, isPositive, index) => {
     let modifiedCloneObj = { ...productObject };
+
+    if (productObject.quantity === 1 && !isPositive) {
+      alert('If you want to remove this item from the cart please click remove from cart button');
+      return;
+    }
+
+    this.setState((prevState) => {
+      let cloneCartWithoutOldObj = [...prevState.cart].map(ele => ({ ...ele }));
+      cloneCartWithoutOldObj[index] = undefined;
+      cloneCartWithoutOldObj[index] = modifiedCloneObj;
+
+      isPositive ? ++modifiedCloneObj.quantity : --modifiedCloneObj.quantity;
+
+      return { cart: [...cloneCartWithoutOldObj] };
+    });
+
+    this.setState((prevState) => {
+      let cost = modifiedCloneObj.cost;
+      let total = Number(prevState.totalCost);
+
+      if (modifiedCloneObj.quantity > productObject.quantity) {
+        return { totalCost: (total += cost).toFixed(2) };
+        
+      } else if (modifiedCloneObj.quantity < productObject.quantity) {
+        return { totalCost: (total -= cost).toFixed(2) };
+      }
+    });
+  }
+
+  addToCart = (productObject) => {
+    let modifiedCloneObj = { ...productObject, quantity: 1 };
 
     /**@note just removed unused properties on the product when in cart */
     delete modifiedCloneObj.description;
     delete modifiedCloneObj.genre;
 
     this.setState((prevState) => ({
-      cart: [modifiedCloneObj, ...prevState.cart]
+      cart: [modifiedCloneObj, ...prevState.cart],
     }));
 
     /**@description removes dup products from cart */
@@ -41,12 +72,12 @@ class App extends Component {
   removeFromCart = (productObject) => {
     /**@description filters out removed product */
     this.setState((prevState) => ({
-      cart: [...prevState.cart].filter((product) => productObject !== product)
+      cart: [...prevState.cart].filter((product) => productObject !== product),
     }));
 
     /**@description subtracts the cost of the removed product */
     this.setState((prevState) => ({
-      totalCost: (prevState.totalCost -= productObject.cost)
+      totalCost: (prevState.totalCost -= productObject.cost),
     }));
     this.calcTotalCartCost();
   }
@@ -96,6 +127,7 @@ class App extends Component {
               cart={cart}
               removeFromCart={this.removeFromCart}
               totalCost={totalCost}
+              handleQuantity={this.handleQuantity}
             />
           )}
         />

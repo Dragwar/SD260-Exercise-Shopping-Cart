@@ -5,7 +5,7 @@ import './CartItem.css';
 
 class CartItem extends React.Component {
   render() {
-    const { product, removeFromCart } = this.props;
+    const { product, removeFromCart, handleQuantity, index } = this.props;
 
     return (
       <li
@@ -32,16 +32,22 @@ class CartItem extends React.Component {
           Price: {product.cost}
         </p>
 
-        <p className="quantity">
-          quantity (still need to add)
-        </p>
+        <div className="quantity">
+          <button className="plus" onClick={() => handleQuantity(product, true, index)}>
+            +
+          </button>
+          <span className="quantity-of-item">{product.quantity}</span>
+          <button className="minus" onClick={() => handleQuantity(product, false, index)}>
+            -
+          </button>
+        </div>
 
         <button
           className="Remove-from-cart-btn"
           onClick={() => removeFromCart(product)}
         >
           Remove From Cart
-        </button> 
+        </button>
 
       </li>
     );

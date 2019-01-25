@@ -42,6 +42,10 @@ class ProductListItem extends React.Component {
           {product.description}
         </p>
 
+        <p className="cost">
+          ${product.cost}
+        </p>
+
         <button
           className="add-to-cart-btn"
           onClick={() => addToCart(product)}

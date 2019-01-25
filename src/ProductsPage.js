@@ -12,7 +12,6 @@ class ProductsPage extends React.Component {
     // query: "",
     products: dataClone,
   }
-  
 
   render() {
     const { products } = this.state;
