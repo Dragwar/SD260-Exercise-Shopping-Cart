@@ -24,15 +24,24 @@ class CartItem extends React.Component {
             alt="video-game-box-art"
             width="200"
             height="250"
+            draggable="false"
           />
         </div>
+
+        <p className="cost">
+          Price: {product.cost}
+        </p>
+
+        <p className="quantity">
+          quantity (still need to add)
+        </p>
 
         <button
           className="Remove-from-cart-btn"
           onClick={() => removeFromCart(product)}
         >
           Remove From Cart
-        </button>
+        </button> 
 
       </li>
     );

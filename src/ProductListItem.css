@@ -1,3 +1,28 @@
 .ProductListItem {
+  list-style: none;
+  padding: 0;
+  padding: 5px 15px 35px;
+  margin: 25px 15px;
+  border: 5px outset darkgray;
+  max-width: 350px;
+  background-color: rgba(153, 140, 139, 0.349);
+}
 
+.ProductListItem button {
+  cursor: pointer;
+  color: white;
+  font-size: 125%;
+  border-color: silver;
+  background-color: #13129c;
+  padding: 15px;
+  outline-offset: -5px;
+  outline: black 3px solid;
+}
+
+.ProductListItem button:hover {
+  background-color: #1111e6;
+}
+
+.ProductListItem button:active {
+  border-color: blue;
 }

@@ -1,3 +1,32 @@
 .ProductsPage {
-  display: block;
+
+}
+
+.totalCost {
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ProductsPage h5.totalCost-wrapper {
+  color: white;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 25px 0px 25px;
+  font-weight: 600;
+  font-size: 125%;
+  background-color: rgba(199, 203, 207, 0.527);
+}
+
+.ProductsPage h4 {
+  margin: 0;
+  padding: 25px 0px 25px;
+  background-color: #b8b8b85c;
+}
+
+.ProductsPage ul {
+  padding: 0;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
 }

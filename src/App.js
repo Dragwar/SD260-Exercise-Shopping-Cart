@@ -8,7 +8,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    cart: []
+    cart: [],
+    totalCost: 0,
   }
 
   addToCart = (productObject) => {
@@ -21,19 +22,53 @@ class App extends Component {
     this.setState((prevState) => ({
       cart: [modifiedCloneObj, ...prevState.cart]
     }));
+
+    /**@description removes dup products from cart */
+    this.setState((prevState) => {
+      const result = [];
+      const map = new Map();
+      for (const product of prevState.cart) {
+        if (!map.has(product.id)) {
+          map.set(product.id, 'present');// Sets a val along side the product.id key
+          result.push({ ...product });
+        }
+      }
+      return { cart: [...result] };
+    });
+    this.calcTotalCartCost();
   }
 
   removeFromCart = (productObject) => {
+    /**@description filters out removed product */
     this.setState((prevState) => ({
       cart: [...prevState.cart].filter((product) => productObject !== product)
     }));
+
+    /**@description subtracts the cost of the removed product */
+    this.setState((prevState) => ({
+      totalCost: (prevState.totalCost -= productObject.cost)
+    }));
+    this.calcTotalCartCost();
+  }
+
+  calcTotalCartCost = () => {
+    this.setState((prevState) => {
+      let total = prevState.cart
+        .map(product => product.cost)
+        .reduce((number, sum) => (sum += number), 0)
+        .toFixed(2);
+      return { totalCost: total };
+    });
   }
 
   render() {
+    const { cart, totalCost } = this.state;
 
     return (
       <div className="App">
-        <NavBar />
+        <NavBar
+          calcTotalCartCost={this.calcTotalCartCost}
+        />
         <Route
           exact
           path="/"
@@ -45,8 +80,9 @@ class App extends Component {
           path="/products"
           component={() => (
             <ProductsPage
-              cart={this.state.cart}
+              cart={cart}
               addToCart={this.addToCart}
+              totalCost={totalCost}
             />
           )}
 
@@ -57,8 +93,9 @@ class App extends Component {
           path="/cart"
           component={() => (
             <Cart
-              cart={this.state.cart}
+              cart={cart}
               removeFromCart={this.removeFromCart}
+              totalCost={totalCost}
             />
           )}
         />

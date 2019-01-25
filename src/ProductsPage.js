@@ -16,12 +16,18 @@ class ProductsPage extends React.Component {
 
   render() {
     const { products } = this.state;
-    const { addToCart, cart } = this.props;
+    const { addToCart, cart, totalCost } = this.props;
 
-    console.log(cart);
+    console.log('CART',cart);
+
     return (
       <div className="ProductsPage">
-        testing list
+        <h4>Products</h4>
+        {
+          !totalCost <= 0 && (
+            <h5 className="totalCost-wrapper">Total Cost: <span className="totalCost">{totalCost}</span></h5>
+          )
+        }
         <ul className="product-list">
           {
             products.map((product, index) => (

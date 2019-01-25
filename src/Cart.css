@@ -1,3 +1,33 @@
 .Cart {
-  
+  padding: 0;
+}
+
+.totalCost {
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Cart h5.totalCost-wrapper {
+  color: white;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 25px 0px 25px;
+  font-weight: 600;
+  font-size: 125%;
+  background-color: rgba(199, 203, 207, 0.527);
+}
+
+.Cart h4 {
+  margin: 0;
+  padding: 25px 0px 25px;
+  background-color: #b8b8b85c;
+}
+
+.Cart ul {
+  margin: 5px 0px 5px 0px;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
 }

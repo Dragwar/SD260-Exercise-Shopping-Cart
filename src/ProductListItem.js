@@ -13,30 +13,31 @@ class ProductListItem extends React.Component {
         className="ProductListItem"
       >
 
-        <h3 className="title">
+        <h2 className="title">
           {product.title}
-        </h3>
+        </h2>
 
         <div className="image-container">
           <img
             className="image"
             src={product.imageURL}
             alt="video-game-box-art"
-            width="200"
-            height="250"
+            width="250"
+            height="300"
+            draggable="false"
           />
         </div>
 
-        <span className="genre-header">
+        <h5 className="genre-header">
           Genre(s):
-        </span>
+        </h5>
         <p className="genre">
           {product.genre.join(', ')}
         </p>
 
-        <span className="description-header">
+        <h5 className="description-header">
           Description:
-        </span>
+        </h5>
         <p className="description">
           {product.description}
         </p>

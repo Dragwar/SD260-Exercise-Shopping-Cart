@@ -4,17 +4,35 @@ import './NavBar.css';
 
 class NavBar extends React.Component {
   render() {
+    // eslint-disable-next-line no-unused-vars
+    const { calcTotalCartCost } = this.props;
     return (
       <nav className="NavBar">
         <ul className="links-container">
           <li className="link-wrapper">
-            <Link className="page-link" to="/">Home</Link>
+            <Link
+              className="page-link"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li className="link-wrapper">
-            <Link className="page-link" to="/cart">Cart</Link>
+            <Link
+              className="page-link"
+              to="/cart"
+              // onClick={calcTotalCartCost} //already invoking when adding a product
+            >
+              Cart
+            </Link>
           </li>
           <li className="link-wrapper">
-            <Link to="/products">Products</Link>
+            <Link
+              className="page-link"
+              to="/products"
+            >
+              Products
+            </Link>
           </li>
         </ul>
       </nav>

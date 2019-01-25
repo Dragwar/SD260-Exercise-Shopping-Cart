@@ -1,10 +1,11 @@
 .NavBar {
-  background-color: rgba(73, 73, 73, 0.39);
+  background-color: rgba(61, 61, 61, 0.685);
   padding: 10px 5px 15px 5px;
 }
 
 .NavBar ul {
   display: flex;
+  flex-flow: wrap row;
   justify-content: space-evenly;
   list-style: none;
   padding: 0;
@@ -12,7 +13,16 @@
 }
 
 .NavBar li {
-
+  position: relative;
+  left: 10px;
+  margin: 20px 20px 20px;
 }
 
+.NavBar .page-link {
+  text-decoration: none;
+  color: gray;
+}
 
+.NavBar .page-link:hover {
+  color: white;
+}
