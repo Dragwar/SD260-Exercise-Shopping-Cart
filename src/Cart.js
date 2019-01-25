@@ -10,8 +10,15 @@ class Cart extends React.Component {
       <div className="Cart">
         <h4>Cart</h4>
         {
-          !totalCost <= 0 && (
-            <h5 className="totalCost-wrapper">Total Cost: <span className="totalCost">{totalCost}</span></h5>
+          !Number(totalCost) <= 0 && (
+            <div className="totalCost-wrapper">
+              <h5>
+                Total Cost: <span className="totalCost">{totalCost}</span>
+              </h5>
+              <span className="number-of-items-in-cart">
+                Number Of Items in Cart: <span>{cart.reduce((prevVal, currVal) => (prevVal += currVal.quantity), 0)}</span>
+              </span>
+            </div>
           )
         }
         {

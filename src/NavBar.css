@@ -14,8 +14,8 @@
 
 .NavBar li {
   position: relative;
-  left: 10px;
-  margin: 20px 20px 20px;
+  right: 5px;
+  margin: 10px;
 }
 
 .NavBar .page-link {
@@ -25,4 +25,12 @@
 
 .NavBar .page-link:hover {
   color: white;
+}
+
+.number-of-items-in-cart {
+  margin: 0;
+}
+
+.number-of-items-in-cart span {
+  font-weight: 800;
 }

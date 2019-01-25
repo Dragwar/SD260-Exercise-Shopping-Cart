@@ -6,22 +6,30 @@ import ProductsPage from './ProductsPage';
 import Cart from './Cart';
 import './App.css';
 
+export function deepCloneArrOfObjs(arrayOfObjects) { return [...arrayOfObjects].map(ele => ({ ...ele })) };
+
 class App extends Component {
   state = {
     cart: [],
     totalCost: 0,
   }
 
+  // --------------------------------------------------------------------------------------------------------------- //
+    /** @Name                                      handleQuantity                                                  */
+  // --------------------------------------------------------------------------------------------------------------- //
   handleQuantity = (productObject, isPositive, index) => {
     let modifiedCloneObj = { ...productObject };
 
     if (productObject.quantity === 1 && !isPositive) {
-      alert('If you want to remove this item from the cart please click remove from cart button');
+      alert(`
+        If you want to remove "${productObject.title}"
+        from your cart please click remove from cart button.
+      `);
       return;
     }
 
     this.setState((prevState) => {
-      let cloneCartWithoutOldObj = [...prevState.cart].map(ele => ({ ...ele }));
+      let cloneCartWithoutOldObj = deepCloneArrOfObjs(prevState.cart);
       cloneCartWithoutOldObj[index] = undefined;
       cloneCartWithoutOldObj[index] = modifiedCloneObj;
 
@@ -34,18 +42,25 @@ class App extends Component {
       let cost = modifiedCloneObj.cost;
       let total = Number(prevState.totalCost);
 
+      modifiedCloneObj.totalCostOfTheQuantityOfItems = (modifiedCloneObj.cost * modifiedCloneObj.quantity);
+
       if (modifiedCloneObj.quantity > productObject.quantity) {
         return { totalCost: (total += cost).toFixed(2) };
-        
+
       } else if (modifiedCloneObj.quantity < productObject.quantity) {
         return { totalCost: (total -= cost).toFixed(2) };
       }
     });
   }
 
+  // --------------------------------------------------------------------------------------------------------------- //
+    /** @Name                                   calcTotalCartCost                                                  */
+
+    /** @NOTE if the item exists in the cart with a quantity above 1, then it will reset the quantity back to zero */
+  // --------------------------------------------------------------------------------------------------------------- //
   addToCart = (productObject) => {
     let modifiedCloneObj = { ...productObject, quantity: 1 };
-
+    modifiedCloneObj.totalCostOfTheQuantityOfItems = (modifiedCloneObj.cost * modifiedCloneObj.quantity);
     /**@note just removed unused properties on the product when in cart */
     delete modifiedCloneObj.description;
     delete modifiedCloneObj.genre;
@@ -69,6 +84,9 @@ class App extends Component {
     this.calcTotalCartCost();
   }
 
+  // --------------------------------------------------------------------------------------------------------------- //
+    /** @Name                                      removeFromCart                                                  */
+  // --------------------------------------------------------------------------------------------------------------- //
   removeFromCart = (productObject) => {
     /**@description filters out removed product */
     this.setState((prevState) => ({
@@ -76,16 +94,18 @@ class App extends Component {
     }));
 
     /**@description subtracts the cost of the removed product */
-    this.setState((prevState) => ({
-      totalCost: (prevState.totalCost -= productObject.cost),
-    }));
-    this.calcTotalCartCost();
+    this.setState((prevState) => {
+      return { totalCost: (prevState.totalCost -= productObject.totalCostOfTheQuantityOfItems).toFixed(2) }
+    });
   }
 
+  // --------------------------------------------------------------------------------------------------------------- //
+    /** @Name                                   calcTotalCartCost                                                  */
+  // --------------------------------------------------------------------------------------------------------------- //
   calcTotalCartCost = () => {
     this.setState((prevState) => {
       let total = prevState.cart
-        .map(product => product.cost)
+        .map(product => product.totalCostOfTheQuantityOfItems)
         .reduce((number, sum) => (sum += number), 0)
         .toFixed(2);
       return { totalCost: total };
@@ -94,10 +114,13 @@ class App extends Component {
 
   render() {
     const { cart, totalCost } = this.state;
+    console.log('CART:', cart);
+    console.log('TOTAL COST:', Number(totalCost));
 
     return (
       <div className="App">
         <NavBar
+          cart={cart}
           calcTotalCartCost={this.calcTotalCartCost}
         />
         <Route

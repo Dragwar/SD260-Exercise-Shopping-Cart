@@ -8,6 +8,14 @@
   background-color: rgba(153, 140, 139, 0.349);
 }
 
+.ProductListItem h5 {
+  margin-bottom: 5px;
+}
+
+.ProductListItem p {
+  margin-top: 5px;
+}
+
 .ProductListItem button {
   cursor: pointer;
   color: white;
